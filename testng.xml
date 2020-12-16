@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <parameter name="baseURI" value="https://api.github.com"/>
+    <parameter name="basePath" value="/search/repositories"/>
+    <test name="github-search-test">
+        <classes>
+            <class name="com.patel.nirma.practice.api.SearchRepoTest">
+                <methods>
+                    <include name="testFetchRepoByLanguage" />
+                    <include name="testFetchRepoByCreatedDate" />
+                    <include name="testFetchRepoByMultipleLanguages" />
+                    <include name="testFetchRepoByUser" />
+                    <include name="testFetchMostStarredRepoWithDescendingOrder" />
+                    <include name="testFetchRepoWithMaxResult" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- github-search-test -->
+</suite> <!-- Default Suite -->
